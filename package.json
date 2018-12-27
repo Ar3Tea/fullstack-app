@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-app",
+  "version": "1.0.0",
+  "description": "This is a full-stack CRUD app using the MERN tech stack.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd backend && node server.js\" \"cd client && npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ar3Tea/fullstack-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ar3Tea/fullstack-app/issues"
+  },
+  "homepage": "https://github.com/Ar3Tea/fullstack-app#readme",
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
