@@ -7,7 +7,7 @@ class App extends Component {
   // initialize our state
   state = {
     data: [],
-    id: 0,
+    id: null,
     message: null,
     intervalIsSet: false,
     idToDelete: null,
@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     this.getDataFromDb();
     if (!this.state.intervalIsSet) {
-      let interval = setInterval(this.getDataFromDb, 1000);
+      let interval = setInterval(this.getDataFromDb, 10000);
       this.setState({ intervalIsSet: interval });
     }
   }
@@ -69,7 +69,7 @@ class App extends Component {
   deleteFromDB = idTodelete => {
     let objIdToDelete = null;
     this.state.data.forEach(dat => {
-      if (dat.id === idTodelete) {
+      if (dat.id == idTodelete) {
         objIdToDelete = dat._id;
       }
     });
@@ -87,7 +87,7 @@ class App extends Component {
   updateDB = (idToUpdate, updateToApply) => {
     let objIdToUpdate = null;
     this.state.data.forEach(dat => {
-      if (dat.id === idToUpdate) {
+      if (dat.id == idToUpdate) {
         objIdToUpdate = dat._id;
       }
     });
@@ -166,3 +166,4 @@ class App extends Component {
 }
 
 export default App;
+//view rawApp2.jsx hosted with ❤ by GitHub
